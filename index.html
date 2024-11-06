@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Role</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .role {
+            font-size: 2em;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Player Role</h1>
+        <p class="role" id="role">Loading...</p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const role = urlParams.get('role');
+
+        document.getElementById('role').textContent = role ? role : "Role not found";
+    </script>
+</body>
+</html>
